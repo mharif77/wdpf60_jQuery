@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+
+
+    <script src="../jquery-3.7.1.min.js"></script>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit vitae ab fugit cupiditate illo illum,
+        quasi
+        aliquid labore porro dolore error rem accusamus magni cum distinctio dicta repellat inventore nihil natus rerum
+        iusto, amet vel. Velit in optio ipsum quod adipisci maxime dicta, quis possimus. Ex maxime iusto illo, unde,
+        soluta
+        exercitationem mollitia ea quae alias magnam blanditiis ad vitae? Error quo officiis cupiditate harum quis nobis
+        labore ea aliquid sed dicta tenetur accusantium officia, odit aut adipisci ducimus, doloremque illum hic
+        laudantium
+        deserunt deleniti in libero culpa! Sint libero ab obcaecati voluptatum possimus. Explicabo officiis assumenda
+        incidunt saepe soluta?
+    </p>
+    <h1>this is heading</h1>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $("p").click(function () {
+                $(this).hide();
+
+            });
+
+
+            $("h1").hover(function () {
+
+                $(this).css("color", "red");
+            })
+            $("h1").mouseover(function () {
+
+                $(this).css("color", "green");
+            })
+        })
+
+    </script>
+</body>
+
+</html>

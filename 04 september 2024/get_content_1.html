@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <!-- <h1></h1> -->
+   
+    <form action="">
+        <input type="text" name="firstname" id="fname" placeholder="Enter your firstname"><br>
+        <input type="text" name="firstname" id="lname" placeholder="Enter your lastname"><br>
+        <textarea name="tt" id="tt"></textarea> <br>
+        
+        
+        <button id="btn1" type="button">click</button>
+    </form>
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+
+                let first = $("#fname").val();
+                let last = $("#lname").val();
+                
+                let output = first + " " + last;
+                $("#tt").html(output);
+
+                // $("h1").html(first);
+                // $("h1").html(last);
+                // //   alert(first + last);
+                //  $("h1").text(first + last);
+            })
+        })
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    alert("Text: " + $("#test").text());
+  });
+  $("#btn2").click(function(){
+    alert("HTML: " + $("#test").html());
+  });
+});
+</script>
+</head>
+<body>
+
+<p id="test">This is some <b>bold</b> text in a paragraph.</p>
+
+<button id="btn1">Show Text</button>
+<button id="btn2">Show HTML</button>
+
+</body>
+</html> -->
