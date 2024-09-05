@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <style>
+        .para1 {
+            font-size: 26px;
+            color: rgb(27, 214, 27);
+        }
+        .para2 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          
+        
+            border: 1px solid red;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="para1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae delectus, quo quos, fuga fugit saepe odit nobis ipsa voluptate ea commodi placeat neque blanditiis nesciunt. Commodi error, nam hic obcaecati quasi quas nihil doloribus aperiam harum debitis? Veniam, eaque officiis culpa similique rerum tempora, accusamus laudantium, facilis non magnam fugiat.</div>
+
+    <button id="btn1">add class</button>
+    <!-- <button id="btn2">empty</button> -->
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("div").addClass("para2");
+            })
+            // $("#btn2").click(function () {
+            //     $("div").empty("");
+            // })
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

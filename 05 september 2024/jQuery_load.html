@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>load method</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <!-- <style>
+        .para1 {
+            font-size: 26px;
+            color: rgb(27, 214, 27);
+        }
+
+        .para2 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+            border: 1px solid red;
+            color: blue;
+        }
+    </style> -->
+</head>
+
+<body>
+    <div id="show" >Data will load</div>
+    
+    <button id="btn1" >click to load</button>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function(){
+                $("#show").load("my_data.txt")
+            })
+        });
+    </script>
+
+
+
+</body>
+
+</html>
