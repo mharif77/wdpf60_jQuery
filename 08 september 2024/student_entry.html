@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <h3>Entry form</h3>
+    <form action="" id="myform">
+        <fieldset>
+            name : <br>
+            <input type="text" name="name" placeholder="Enter name" id="nm"> <br>
+            gender : <br>
+            male <input type="radio" name="gender" value="male" id="gender">
+            female <input type="radio" name="gender" value="female" id="gender"> <br>
+            date of Birth :<br>
+            <input type="date" name="dob" placeholder="Enter dob" id="dob"> <br><br>
+            email : <br>
+            <input type="text" name="email" placeholder="enter email" id="email"><br><br>
+            phone : <br>
+            <input type="text" name="phone" placeholder="enter phone number" id="phone"><br><br>
+            address : <br>
+            <textarea name="address" id="mm"></textarea><br><br>
+            <input type="button" name="submit" value="SUBMIT" id="btn">
+        </fieldset>
+    </form>
+    <div id="student_list"></div>
+    <SCript>
+        $(document).ready(function () {
+            // get_students();
+            $("#student_list").load("students.php");
+            $("#btn").click(function () {
+                // alert($("#myform").serialize());
+                let formdata = $("#myform").serialize();
+                console.log(formdata);
+                $.post("insert.php", { mydata: formdata }, function (data, status) {
+                    alert(data);
+                })
+                // get_students();
+                $("#student_list").load("students.php");
+            })
+            $(".stid").on('click', function (event) {
+                event.preventDefault();
+                let stid = $(this).attr("value");
+                alert(stid);
+
+            })
+            // function get_students() {
+            //     $.get('students.php', function (data, status) {
+            //         $("#student_list").html(data);
+
+            //     })
+            // }
+        });
+    </SCript>
+
+</body>
+
+</html>
