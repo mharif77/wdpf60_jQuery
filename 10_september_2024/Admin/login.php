@@ -1,6 +1,9 @@
 <?php
 require_once "dbconfig.php";
+
 session_start();
+
+
 if (isset($_POST['login'])) {
 
     $email = $_POST['email'];
